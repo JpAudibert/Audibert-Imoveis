@@ -1,0 +1,30 @@
+.mid-field{
+    text-align: center;
+}
+.cor-audibert{
+    background-color: #01476d!important;
+}
+body{
+    background-color: rgb(252, 252, 252)!important;
+}
+.abaixa{
+    margin-top: 15px;
+}
+.right{
+    margin-left: 86%;
+}
+.right-select{
+    margin-left: 68%;
+    margin-bottom: 15px;
+}
+.abaixa-bem{
+    margin-bottom: 15px;
+}
+.fixar-baixo{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.abaixa-muito{
+    margin-top: 30px;;
+}
