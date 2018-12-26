@@ -39,7 +39,7 @@
                     <p>Avaliamos seu imóvel de maneira rápida e dinâmica. Você traz a documentação: escritura, matrícula do imóvel e logo sua avaliação estará pronta. Trabalhamos com um atendimento diferenciado.  Sempre pensando em atender melhor a você e sua família.</p>
                     <p>Para melhor comodidade: ligue e agende um horário.   </p>
                     <ul>
-                        <li>Telefone do plantão: 99973-2414.</li>
+                        <li>Telefone do plantão: (54) 99973-2414.</li>
                         <li>Edson Audibert</li>
                         <li>Creci: 34.941</li>
                         <li>Rua Salgado Filho, 29, Centro, Carlos Barbosa</li>
