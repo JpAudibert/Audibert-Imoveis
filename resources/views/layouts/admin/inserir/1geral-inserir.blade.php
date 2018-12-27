@@ -13,7 +13,7 @@
 
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
-                    <label for="valor" class="form-label">Valor:</label><br>
+                    <label for="valor" class="form-label">Valor: <span style="color:gray">(deixe em branco se sob consulta)</span></label><br>
                     <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
                   </div>
                   <div class="controls col-md-6">
@@ -43,9 +43,3 @@
                     <input type="text" class="form-control" id="estado" name="estado" required="" placeholder="UF">
                   </div>
                 </div>
-                <script>
-                    var a = $("#valor")
-                    if(a==null){
-                        a.value = "Sob Consulta";
-                    };
-                </script>

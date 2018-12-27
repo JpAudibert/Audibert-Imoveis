@@ -268,12 +268,6 @@ class ImovelController extends Controller
         */
         public function update(Request $request)
         {
-            if($request->hasfile('img'))
-            {
-                $img=$request->file('img');
-                $name=$img->getClientOriginalname();
-                $img->move(public_path().'/images/', $name);
-            }
             $imovel = Imovel::find($request->id);
             $imovel->titulo = $request->get('titulo');
             $imovel->areatt = $request->get('areatt');
@@ -308,6 +302,26 @@ class ImovelController extends Controller
             $imovel->energia = $request->get('energia');
             $imovel->categoria = $request->get('categoria');
             $imovel->save();
+            $this->validate($request, [
+
+                'img' => 'required',
+                'img.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+
+                ]);
+
+                if($request->hasfile('img'))
+                {
+
+                    foreach($request->file('img') as $image)
+                    {
+                        $name=$image->getClientOriginalName();
+                        $image->move(public_path().'/images/imovel'.$imovel->id.'/', $name);
+                        $data[] = $name;
+                    }
+                }
+
+                $imovel->img=$data;
+                $imovel->save();
 
             return redirect('visualizar')->with('success', 'Imóvel alterado com sucesso');
         }
