@@ -8,7 +8,9 @@ body{
     background-color: rgb(252, 252, 252)!important;
 }
 .abaixa{
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 15px;
 }
 .right{
     margin-left: 86%;
@@ -32,4 +34,66 @@ body{
     width: 350px;
     height: 200px;
     object-fit: cover;
+}
+.fit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box{
+    width: 100%;
+    height: 145px;
+    background-color: #01476d;
+    margin: 20px auto;
+}
+.alinha-texto{
+    padding: 20px;
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+.descricao{
+    width: 50%;
+    height: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    margin: 10px 20px;
+    text-align: justify;
+    font-size: 17px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: white;
+    border-right-color: gray;
+    float: left;
+}
+.titulo-descricao{
+    padding-top: 20px;
+    margin-bottom: -12px;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.dados-adicionais{
+    width: 100%;
+}
+.dados-mais{
+    width: 42.5%;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 10px 20px;
+    margin-top: -12px;
+    text-align: justify;
+    font-size: 17px;
+    float: left;
+}
+.espacamento{
+    height: 35px;
+}
+.nao-mostra{
+    display: none;
 }

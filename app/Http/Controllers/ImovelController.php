@@ -78,6 +78,7 @@ class ImovelController extends Controller
         $imovel->estado = $request->get('estado');
         $imovel->cep = $request->get('cep');
         $imovel->obs = $request->get('obs');
+        $imovel->notas = $request->get('notas');
 
         switch ($request->get('discriminator')) {
             case 'casa':
@@ -94,7 +95,7 @@ class ImovelController extends Controller
             $imovel->mobilia = $request->get('mobilia');
             break;
 
-            case 'ap':
+            case 'apartamento':
             $imovel->areapv = $request->get('areapv');
             $imovel->garagem = $request->get('garagem');
             $imovel->churras = $request->get('churras');
@@ -278,6 +279,7 @@ class ImovelController extends Controller
             $imovel->estado = $request->get('estado');
             $imovel->cep = $request->get('cep');
             $imovel->obs = $request->get('obs');
+            $imovel->notas = $request->get('notas');
             $imovel->areapv = $request->get('areapv');
             $imovel->garagem = $request->get('garagem');
             $imovel->jardim = $request->get('jardim');
@@ -323,26 +325,26 @@ class ImovelController extends Controller
                 $imovel->img=$data;
                 $imovel->save();
 
-            return redirect('visualizar')->with('success', 'Imóvel alterado com sucesso');
-        }
+                return redirect('visualizar')->with('success', 'Imóvel alterado com sucesso');
+            }
 
-        /**
-        * Remove the specified resource from storage.
-        *
-        * @param  int  $id
-        * @return \Illuminate\Http\Response
-        */
-        public function destroy($id)
-        {
-            $imovel = Imovel::find($id);
-            $imovel->delete('/images/imovel'.$id);
-            $imovel->delete();
-            return redirect('visualizar')->with('success','Imóvel deletado com Sucesso');
-        }
+            /**
+            * Remove the specified resource from storage.
+            *
+            * @param  int  $id
+            * @return \Illuminate\Http\Response
+            */
+            public function destroy($id)
+            {
+                $imovel = Imovel::find($id);
+                $imovel->delete('/images/imovel'.$id);
+                $imovel->delete();
+                return redirect('visualizar')->with('success','Imóvel deletado com Sucesso');
+            }
 
-        public function quemsomos()
-        {
-            return view('quemsomos');
-        }
+            public function quemsomos()
+            {
+                return view('quemsomos');
+            }
 
-    }
+        }
