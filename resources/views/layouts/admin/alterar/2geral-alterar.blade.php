@@ -5,7 +5,7 @@
         </div>
         <div class="controls col-md-6">
             <label for="obs" class="form-label">Notas:</label><br>
-            <textarea class="form-control" id="obs" required="" name="notas" rows="4" placeholder="Notas da Venda">{{$imovel->notas}}</textarea>
+            <textarea class="form-control" id="obs" name="notas" rows="4" placeholder="Notas da Venda">{{$imovel->notas}}</textarea>
         </div>
     </div>
     <div class="control-group form-group row">

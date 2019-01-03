@@ -27,8 +27,8 @@
               <div class="list-group">
                     <a href="{{url('apartamento/inserir')}}" class="list-group-item">Apartamento</a>
                     <a href="{{url('casa/inserir')}}" class="list-group-item">Casa</a>
-                    <a href="{{url('terreno/inserir')}}" class="list-group-item active">Terreno</a>
-                    <a href="{{url('rural/inserir')}}" class="list-group-item">Área Rural</a>
+                    <a href="{{url('terreno/inserir')}}" class="list-group-item">Terreno</a>
+                    <a href="{{url('rural/inserir')}}" class="list-group-item active">Área Rural</a>
                     <a href="{{url('comercial/inserir')}}" class="list-group-item">Salas/Pavilhões</a>
               </div>
             </div>

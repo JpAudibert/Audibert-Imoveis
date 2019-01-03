@@ -17,7 +17,7 @@
             <li class="breadcrumb-item">
                 <a href="{{route('home')}}">Admin</a>
             </li>
-            <li class="breadcrumb-item active">Mostrar Apartamento</li>
+            <li class="breadcrumb-item active">Mostrar Casa</li>
         </ol>
         <!-- Content Row -->
         <div class="row">
@@ -54,7 +54,7 @@
                     <i class="fas fa-map-pin"></i>&nbsp;&nbsp;Endereço: {{$imovel->endereco}}, {{$imovel->bairro}}, {{$imovel->cidade}}, {{$imovel->estado}} - {{$imovel->cep}}
                 </div>
                 <div class="alinha-texto">
-                    <i class="fas fa-ruler-combined"></i>&nbsp;&nbsp;Área Total: {{$imovel->areatt}} m² -
+                    <i class="fas fa-ruler-combined"></i>&nbsp;&nbsp;Área do Terreno: {{$imovel->areatt}} m² -
                     &nbsp;&nbsp;<i class="fas fa-car"></i>&nbsp;&nbsp;Vagas de Garagem: @if ($imovel->garagem=="0")
                     Sem garagem -
                     @else
@@ -81,21 +81,14 @@
                     @endif
                 </div>
                 <div class="dados-mais">
-                    <p><i class="fas fa-ruler-combined green"></i>&nbsp;&nbsp; Área Privativa: {{$imovel->areapv}} m² </p>
-                    @if ($imovel->cozinha!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Cozinha</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Cozinha </p> @endif
+                    <p><i class="fas fa-ruler-combined green"></i>&nbsp;&nbsp; Área da Casa: {{$imovel->areapv}} m² </p>
+                    @if ($imovel->jardim!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Jardim</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Jardim </p> @endif
                     @if ($imovel->churras!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Churrasqueira</p>  @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Churrasqueira</p> @endif
                     @if ($imovel->mobilia!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Mobília</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Mobília</p> @endif
                     @if ($imovel->aguaq!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Água Quente </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Água Quente</p> @endif
-                    @if ($imovel->sala!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Sala de Estar </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Sala de Estar</p> @endif
+                    @if ($imovel->cerca!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Cercado </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Cercado</p> @endif
                     @if ($imovel->lavandeira!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Lavanderia</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Lavanderia</p> @endif
-                    @if ($imovel->fone!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Interfone/Videofone </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Interfone/Videofone </p> @endif
-                    @if ($imovel->sacada!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Sacada</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Sacada</p> @endif
-                    @if ($imovel->elevador!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Elevador</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Elevador</p> @endif
-                    @if ($imovel->gas!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Gás Central </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Gás Central</p> @endif
-                    @if ($imovel->medidores!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Medidores Individuais </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Medidores Individuais</p> @endif
-                    @if ($imovel->festas!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Salão de Festas </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Salão de Festas</p> @endif
-                    @if ($imovel->portaria!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Portaria</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Portaria</p> @endif
-                    @if ($imovel->net!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Internet</p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Internet</p> @endif
+                    @if ($imovel->quiosque!=="t")<p  class="nao-mostra"><i class="far fa-check-square green"></i> Quiosque </p> @else <p><i class="far fa-check-square green"></i>&nbsp;&nbsp; Quiosque </p> @endif
                 </div>
             </div>
 

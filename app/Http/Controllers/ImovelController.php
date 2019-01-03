@@ -273,7 +273,11 @@ class ImovelController extends Controller
             $imovel->titulo = $request->get('titulo');
             $imovel->areatt = $request->get('areatt');
             $imovel->endereco = $request->get('endereco');
-            $imovel->valor = $request->get('valor');
+            if(!is_numeric($request->get('valor'))){
+                $imovel->valor = "Sob consulta";
+            }elseif(is_numeric($request->get('valor'))){
+                $imovel->valor = 'R$ '.$request->get('valor');
+            }
             $imovel->bairro = $request->get('bairro');
             $imovel->cidade = $request->get('cidade');
             $imovel->estado = $request->get('estado');

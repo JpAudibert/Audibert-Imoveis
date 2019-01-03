@@ -16,10 +16,10 @@
                 @php($i++)
         <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-            <a href="{{url($venda['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($venda['id']))}}"><img class="card-img-top tamanho-inicial" src="/images/imovel{{$venda->id}}/{{$venda->img[0]}}" alt=""></a>
+            <a href="{{url($venda['discriminator'].'/ver/mais', Illuminate\Support\Facades\Crypt::encryptString($venda['id']))}}"><img class="card-img-top tamanho-inicial" src="/images/imovel{{$venda->id}}/{{$venda->img[0]}}" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                        <a href="{{url($venda['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($venda['id']))}}">{{$venda['titulo']}}</a>
+                        <a href="{{url($venda['discriminator'].'/ver/mais', Illuminate\Support\Facades\Crypt::encryptString($venda['id']))}}">{{$venda['titulo']}}</a>
                     </h4>
                     <p class="card-text">{{$venda['obs']}}</p>
                 </div>

@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    @include('\layouts.admin.head')
-    <title>Mostrar Imóvel</title>
+    @include('\layouts.site.head')
+    <title>Ver Mais Imóvel</title>
 </head>
 <body>
     <div class="container">
-        @include('\layouts.admin.navbar')
+        @include('\layouts.site.navbar')
 
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">{{$imovel->titulo}}
@@ -15,7 +15,7 @@
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="{{route('home')}}">Admin</a>
+                <a href="{{url('/')}}">Página Inicial</a>
             </li>
             <li class="breadcrumb-item active">Mostrar Apartamento</li>
         </ol>
@@ -72,13 +72,6 @@
                 <h4 class="titulo-descricao">Descrição do imovel:</h4>
                 <div class="descricao">
                     <p>{{$imovel->obs}}</p>
-                    <br>
-                    <h5>Notas:</h5>
-                    @if ($imovel->notas==null)
-                    Não há anotações.
-                    @else
-                    <p>{{$imovel->notas}}</p>
-                    @endif
                 </div>
                 <div class="dados-mais">
                     <p><i class="fas fa-ruler-combined green"></i>&nbsp;&nbsp; Área Privativa: {{$imovel->areapv}} m² </p>
@@ -102,7 +95,7 @@
         </div>
     </div>
     @include('\layouts.footer')
-    @include('\layouts.admin.scripts')
+    @include('\layouts.site.scripts')
 
 </body>
 

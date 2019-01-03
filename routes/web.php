@@ -62,15 +62,15 @@ Route::get('comercial/ver/{id}', 'ImovelController@showComercial')->middleware('
 Route::resource('imovels','ImovelController')->middleware('auth');
 
 //criar View Mostar ADMIN
-Route::get('terrenover/{id}', 'ImovelController@showTerrenoSite');
+Route::get('terreno/ver/mais/{id}', 'ImovelController@showTerrenoSite');
 
-Route::get('casaver/{id}', 'ImovelController@showCasaSite');
+Route::get('casa/ver/mais/{id}', 'ImovelController@showCasaSite');
 
-Route::get('apver/{id}', 'ImovelController@showApSite');
+Route::get('apartamento/ver/mais/{id}', 'ImovelController@showApSite');
 
-Route::get('ruralver/{id}', 'ImovelController@showRuralSite');
+Route::get('rural/ver/mais/{id}', 'ImovelController@showRuralSite');
 
-Route::get('comercialver/{id}', 'ImovelController@showComercialSite');
+Route::get('comercial/ver/mais/{id}', 'ImovelController@showComercialSite');
 
 // listar SITE
 Route::get('/', 'ImovelController@indexSite')->name('vendas');

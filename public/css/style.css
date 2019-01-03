@@ -97,3 +97,11 @@ body{
 .nao-mostra{
     display: none;
 }
+.descricao-site{
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    margin: 10px 20px;
+    text-align: justify;
+    font-size: 17px;
+}
