@@ -1,33 +1,24 @@
+{{-- {{dd($imovels)}} --}}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Imóveis</title>
+    <title>Apartamentos</title>
     @include('layouts.admin.head')
 </head>
 <body>
     <div class="container">
         @include('layouts.admin.navbar')
         <br />
-        <h1 class="mt-4 mb-3">Imóveis</small>
+        <h1 class="mt-4 mb-3">Apartamentos</small>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="{{route('home')}}">Admin</a>
             </li>
-            <li class="breadcrumb-item active">Imóveis</li>
+            <li class="breadcrumb-item active">Apartamentos</li>
         </ol>
-        <div class="col-md-4 right-select">
-            <select class="custom-select" id="imoveis">
-                <option hidden>Selecione Tipo</option>
-                <option value="ap">Apartamento</option>
-                <option value="casa">Casa</option>
-                <option value="terreno">Terreno</option>
-                <option value="rural">Rural</option>
-                <option value="comercial">Comercial</option>
-                <select>
-                </div>
-                <table class="table table-striped mid-field" id="imoveis" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+                <table class="table table-striped mid-field">
                     <thead>
                         <tr>
                             <th>ID</th>

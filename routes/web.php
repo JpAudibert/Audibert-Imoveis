@@ -15,9 +15,20 @@
 Auth::routes();
 
 //inicio ADMIN
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/home', 'ImovelController@indexHome')->name('home')->middleware('auth');
 
-Route::get('/visualizar', 'ImovelController@index')->name('visualizar');
+Route::get('/visualizar', 'ImovelController@index')->name('visualizar')->middleware('auth');
+
+//Listar conforme tipo ADMIN
+Route::get('/apartamento/visualizar', 'ImovelController@indexAdminAp')->name('visualizarAp')->middleware('auth');
+
+Route::get('/casa/visualizar', 'ImovelController@indexAdminCasa')->name('visualizarCasa')->middleware('auth');
+
+Route::get('/comercial/visualizar', 'ImovelController@indexAdminComercial')->name('visualizarComercial')->middleware('auth');
+
+Route::get('/rural/visualizar', 'ImovelController@indexAdminRural')->name('visualizarRural')->middleware('auth');
+
+Route::get('/terreno/visualizar', 'ImovelController@indexAdminTerreno')->name('visualizarTerreno')->middleware('auth');
 
 //criar View Inserir ADMIN
 Route::get('terreno/inserir', 'ImovelController@createTerreno')->name('terrenoinserir')->middleware('auth');
@@ -77,3 +88,14 @@ Route::get('/', 'ImovelController@indexSite')->name('vendas');
 
 // quem somos SITE
 Route::get('quemsomos', 'ImovelController@quemsomos')->name('quemsomos');
+
+//Listar Imóveis por Tipo SITE
+Route::get('/apartamento/vendas', 'ImovelController@vendasAp')->name('vendasAp');
+
+Route::get('/casa/vendas', 'ImovelController@vendasCasa')->name('vendasCasa');
+
+Route::get('/comercial/vendas', 'ImovelController@vendasComercial')->name('vendasComercial');
+
+Route::get('/rural/vendas', 'ImovelController@vendasRural')->name('vendasRural');
+
+Route::get('/terreno/vendas', 'ImovelController@vendasTerreno')->name('vendasTerreno');

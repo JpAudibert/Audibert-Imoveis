@@ -71,7 +71,7 @@
             <div class="dados">
                 <h4 class="titulo-descricao">Descrição do imovel:</h4>
                 <div class="descricao">
-                    <p>{{$imovel->obs}}</p>
+                    <p class="texto-50">{{$imovel->obs}}</p>
                     <br>
                     <h5>Notas:</h5>
                     @if ($imovel->notas==null)

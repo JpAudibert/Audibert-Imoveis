@@ -26,6 +26,41 @@ class ImovelController extends Controller
         return view('welcome', compact('vendas'));
     }
 
+    public function indexHome()
+    {
+        $imoveis = Imovel::all();
+        return view('admin.home', compact('imoveis'));
+    }
+
+    public function indexAdminAp()
+    {
+        $imovels = Imovel::all()->where("discriminator","=","apartamento");;
+        return view('admin.zap.list', compact('imovels'));
+    }
+
+    public function indexAdminCasa()
+    {
+        $imovels = Imovel::all()->where("discriminator","=","casa");;
+        return view('admin.zcasa.list', compact('imovels'));
+    }
+
+    public function indexAdminComercial()
+    {
+        $imovels = Imovel::all()->where("discriminator","=","comercial");;
+        return view('admin.zcomercial.list', compact('imovels'));
+    }
+
+    public function indexAdminRural()
+    {
+        $imovels = Imovel::all()->where("discriminator","=","rural");;
+        return view('admin.zrural.list', compact('imovels'));
+    }
+
+    public function indexAdminTerreno()
+    {
+        $imovels = Imovel::all()->where("discriminator","=","terreno");
+        return view('admin.zterreno.list', compact('imovels'));
+    }
     /**
     * Show the form for creating a new resource.
     *
@@ -351,4 +386,29 @@ class ImovelController extends Controller
                 return view('quemsomos');
             }
 
+            public function vendasAp()
+            {
+                $ap = Imovel::all();
+                return view('site.zap.list', compact('ap'));
+            }
+            public function vendasCasa()
+            {
+                $casa = Imovel::all();
+                return view('site.zcasa.list', compact('casa'));
+            }
+            public function vendasComercial()
+            {
+                $comercial = Imovel::all();
+                return view('site.zcomercial.list', compact('comercial'));
+            }
+            public function vendasRural()
+            {
+                $rural = Imovel::all();
+                return view('site.zrural.list', compact('rural'));
+            }
+            public function vendasTerreno()
+            {
+                $terreno = Imovel::all();
+                return view('site.zterreno.list', compact('terreno'));
+            }
         }
