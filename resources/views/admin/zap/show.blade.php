@@ -51,21 +51,39 @@
             </div>
             <div class="listagem-imovel box">
                 <div class="alinha-texto">
-                    <i class="fas fa-map-pin"></i>&nbsp;&nbsp;Endereço: {{$imovel->endereco}}, {{$imovel->bairro}}, {{$imovel->cidade}}, {{$imovel->estado}} - {{$imovel->cep}}
+                    <i class="fas fa-map-pin"></i>&nbsp;&nbsp;Endereço: {{$imovel->endereco}}, {{$imovel->bairro}}, {{$imovel->cidade}}, {{$imovel->estado}} - {{$imovel->cep}} - &nbsp;&nbsp;<i class="fas fa-money-bill-wave"></i> Valor: {{$imovel->valor}}
                 </div>
                 <div class="alinha-texto">
                     <i class="fas fa-ruler-combined"></i>&nbsp;&nbsp;Área Total: {{$imovel->areatt}} m² -
                     &nbsp;&nbsp;<i class="fas fa-car"></i>&nbsp;&nbsp;Vagas de Garagem: @if ($imovel->garagem=="0")
-                    Sem garagem -
+                    Sem garagem
                     @else
-                    {{$imovel->garagem}} vagas -
+                    @if ($imovel->garagem=='4')
+                    {{$imovel->garagem}} ou mais vagas
+                    @else
+                    {{$imovel->garagem}} vagas
                     @endif
+                    @endif
+                </div>
+                <div class="alinha-texto">
                     &nbsp;&nbsp;<i class="fas fa-bed"></i> Dormitórios: @if ($imovel->quartos=="1")
                     {{$imovel->quartos}} quarto -
                     @else
+                    @if ($imovel->quartos=='4')
+                    {{$imovel->quartos}} ou mais quartos -
+                    @else
                     {{$imovel->quartos}} quartos -
                     @endif
-                    &nbsp;&nbsp;<i class="fas fa-money-bill-wave"></i> Valor: {{$imovel->valor}}
+                    @endif
+                    &nbsp;&nbsp;<i class="fas fa-toilet-paper"></i> Banheiros: @if ($imovel->banheiros=="1")
+                    {{$imovel->banheiros}} banheiro
+                    @else
+                    @if ($imovel->banheiros=='4')
+                    {{$imovel->banheiros}} ou mais banheiros
+                    @else
+                    {{$imovel->banheiros}} banheiros
+                    @endif
+                    @endif
                 </div>
             </div>
             <div class="dados">

@@ -58,13 +58,26 @@ body{
     height: auto;
     padding-top: 20px;
     padding-right: 20px;
-    margin: 10px 20px;
+    margin: 10px auto;
     text-align: justify;
     font-size: 17px;
     border-style: solid;
     border-width: 0.5px;
-    border-color: white;
+    border-color: transparent;
     border-right-color: gray;
+    float: left;
+    max-width: 50%;
+    min-width: 50%;
+}
+.dados-mais{
+    width: 42.5%;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 10px 20px;
+    margin-top: -12px;
+    text-align: justify;
+    font-size: 17px;
     float: left;
 }
 .titulo-descricao{
@@ -79,17 +92,6 @@ body{
 }
 .dados-adicionais{
     width: 100%;
-}
-.dados-mais{
-    width: 42.5%;
-    height: auto;
-    padding-top: 20px;
-    padding-left: 20px;
-    margin: 10px 20px;
-    margin-top: -12px;
-    text-align: justify;
-    font-size: 17px;
-    float: left;
 }
 .espacamento{
     height: 35px;
@@ -115,4 +117,13 @@ body{
 }
 .dashboard{
     padding-top: 10%;
+}
+.tabela-listagem{
+    padding: 10px 0px;
+}
+.dados{
+    margin: 0 auto;
+}
+.centro{
+    margin: 0 auto;
 }

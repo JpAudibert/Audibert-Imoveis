@@ -19,7 +19,7 @@
             <li class="breadcrumb-item active">Áreas Rurais</li>
         </ol>
         <div class="row">
-            @foreach ($rural->where("discriminator","=","rural") as $rural)
+            @foreach ($rurals as $rural)
             <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="{{url($rural['discriminator'].'/ver/mais', Illuminate\Support\Facades\Crypt::encryptString($rural['id']))}}"><img class="card-img-top tamanho-card" src="/images/imovel{{$rural->id}}/{{$rural->img[0]}}" alt=""></a>
@@ -35,33 +35,14 @@
                 </div>
             </div>
             @endforeach
+            <div class="centro">
+                {{ $rurals->links() }}
+            </div>
         </div>
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
     </div>
+</div>
 
-    @include('layouts.footer')
-    @include('layouts.site.scripts')
+@include('layouts.footer')
+@include('layouts.site.scripts')
 </body>
 </html>

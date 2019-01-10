@@ -17,56 +17,55 @@
             </li>
             <li class="breadcrumb-item active">Imóveis</li>
         </ol>
-        <div class="col-md-4 right-select">
-            <select class="custom-select" id="imoveis">
-                <option hidden>Selecione Tipo</option>
-                <option value="ap">Apartamento</option>
-                <option value="casa">Casa</option>
-                <option value="terreno">Terreno</option>
-                <option value="rural">Rural</option>
-                <option value="comercial">Comercial</option>
-                <select>
-                </div>
-                <table class="table table-striped mid-field" id="imoveis" data-order='[[ 1, "asc" ]]' data-page-length='25'>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Título</th>
-                            <th>Área Total</th>
-                            <th>Endereço</th>
-                            <th>Valor</th>
-                            <th>Cidade</th>
-                            <th colspan="3">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($imovels as $imovel)
+        <div class="tabela-listagem"></div>
+        <div class="table-responsive">
+            <table class="table table-striped mid-field" id="imovel">
+                <thead>
+                    <tr class="linha-maior">
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Área Total</th>
+                        <th>Endereço</th>
+                        <th>Valor</th>
+                        <th>Cidade</th>
+                        <th>Ação 1</th>
+                        <th>Ação 2</th>
+                        <th>Ação 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($imovels as $imovel)
+                    <tr linha-maior>
+                        <td>{{$imovel['id']}} </td>
+                        <td>{{$imovel['titulo']}}</td>
+                        <td>{{$imovel['areatt']}} m²</td>
+                        <td>{{$imovel['endereco']}}</td>
+                        <td>{{$imovel['valor']}}</td>
+                        <td>{{$imovel['cidade']}}</td>
+                        <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Ver Mais</a></td>
+                        <td><a href="{{url($imovel['discriminator'].'/alterar', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-warning">Alterar</a></td>
+                        <td>
+                            <form action="{{action('ImovelController@destroy', $imovel['id'])}}" method="post">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-danger" type="submit">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <div class="tabela-listagem"></div>
+        </div>
+    </div>
+</div>
 
-                        <tr>
-                            <td>{{$imovel['id']}} </td>
-                            <td>{{$imovel['titulo']}}</td>
-                            <td>{{$imovel['areatt']}} m²</td>
-                            <td>{{$imovel['endereco']}}</td>
-                            <td id="valor">{{$imovel['valor']}}</td>
-                            <td>{{$imovel['cidade']}}</td>
-                            <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Ver Mais</a></td>
-                            <td><a href="{{url($imovel['discriminator'].'/alterar', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-warning">Alterar</a></td>
-                            <td>
-                                <form action="{{action('ImovelController@destroy', $imovel['id'])}}" method="post">
-                                    @csrf
-                                    <input name="_method" type="hidden" value="DELETE">
-                                    <button class="btn btn-danger" type="submit">Excluir</button>
-                                </form>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                <div class="col-md-12">
-                </div>
-            </div>
-
-            @include('layouts.footer')
-            @include('layouts.admin.scripts')
-        </body>
-        </html>
+@include('layouts.footer')
+@include('layouts.admin.scripts')
+<script>
+    $(document).ready(function(){
+        $('#imovel').DataTable();
+    });
+</script>
+</body>
+</html>

@@ -34,11 +34,12 @@
                   </div>
                   <div class="col-lg-6">
                     <h2>Audibert Corretora de Imóveis</h2>
-                    <p>Duas décadas de experiência no ramo imobiliário, comercializamos seu terreno, sítio, casa, apartamento, enfim... Vendemos todo o tipo de imóvel. Nossa tradição é o cuidado nas negociações: vendedor e comprador sempre instruídos a fazer o melhor negócio.</p>
+                    <p style="text-align:justify;">Há mais de duas décadas de experiência no ramo imobiliário, comercializamos seu terreno, sítio, casa, apartamento, enfim... Vendemos todo o tipo de imóvel. Nossa tradição é o cuidado nas negociações: vendedor e comprador sempre instruídos a fazer o melhor negócio.</p>
                     <h3>Audibert Avaliador de Imóveis </h3>
-                    <p>Avaliamos seu imóvel de maneira rápida e dinâmica. Você traz a documentação: escritura, matrícula do imóvel e logo sua avaliação estará pronta. Trabalhamos com um atendimento diferenciado.  Sempre pensando em atender melhor a você e sua família.</p>
+                    <p style="text-align:justify;">Avaliamos seu imóvel de maneira rápida e dinâmica. Você traz a documentação: escritura, matrícula do imóvel e logo sua avaliação estará pronta. Trabalhamos com um atendimento diferenciado.  Sempre pensando em atender melhor a você e sua família.</p>
                     <p>Para melhor comodidade: ligue e agende um horário.   </p>
                     <ul>
+                        <li>Telefone: (54) 3461-2025.</li>
                         <li>Telefone do plantão: (54) 99973-2414.</li>
                         <li>Edson Audibert</li>
                         <li>Creci: 34.941</li>

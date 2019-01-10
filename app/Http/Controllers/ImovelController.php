@@ -388,27 +388,27 @@ class ImovelController extends Controller
 
             public function vendasAp()
             {
-                $ap = Imovel::all();
-                return view('site.zap.list', compact('ap'));
+                $aps = Imovel::where('discriminator','=','apartamento')->paginate(12);
+                return view('site.zap.list', compact('aps'));
             }
             public function vendasCasa()
             {
-                $casa = Imovel::all();
-                return view('site.zcasa.list', compact('casa'));
+                $casas = Imovel::where('discriminator','=','casa')->paginate(12);
+                return view('site.zcasa.list', compact('casas'));
             }
             public function vendasComercial()
             {
-                $comercial = Imovel::all();
-                return view('site.zcomercial.list', compact('comercial'));
+                $comercials = Imovel::where('discriminator','=','comercial')->paginate(12);
+                return view('site.zcomercial.list', compact('comercials'));
             }
             public function vendasRural()
             {
-                $rural = Imovel::all();
-                return view('site.zrural.list', compact('rural'));
+                $rurals = Imovel::where('discriminator','=','rural')->paginate(12);
+                return view('site.zrural.list', compact('rurals'));
             }
             public function vendasTerreno()
             {
-                $terreno = Imovel::all();
-                return view('site.zterreno.list', compact('terreno'));
+                $terrenos = Imovel::where('discriminator','=','terreno')->paginate(12);
+                return view('site.zterreno.list', compact('terrenos'));
             }
         }

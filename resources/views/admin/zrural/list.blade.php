@@ -18,46 +18,56 @@
             </li>
             <li class="breadcrumb-item active">Áreas Rurais</li>
         </ol>
-        <table class="table table-striped mid-field">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Título</th>
-                    <th>Área Total</th>
-                    <th>Endereço</th>
-                    <th>Valor</th>
-                    <th>Cidade</th>
-                    <th colspan="3">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($imovels as $imovel)
+        <div class="tabela-listagem"></div>
+        <div class="table-responsive">
+            <table class="table table-striped mid-field" id="imovel">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Área Total</th>
+                        <th>Endereço</th>
+                        <th>Valor</th>
+                        <th>Cidade</th>
+                        <th>Ação 1</th>
+                        <th>Ação 2</th>
+                        <th>Ação 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($imovels as $imovel)
 
-                <tr>
-                    <td>{{$imovel['id']}} </td>
-                    <td>{{$imovel['titulo']}}</td>
-                    <td>{{$imovel['areatt']}} m²</td>
-                    <td>{{$imovel['endereco']}}</td>
-                    <td id="valor">{{$imovel['valor']}}</td>
-                    <td>{{$imovel['cidade']}}</td>
-                    <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Ver Mais</a></td>
-                    <td><a href="{{url($imovel['discriminator'].'/alterar', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-warning">Alterar</a></td>
-                    <td>
-                        <form action="{{action('ImovelController@destroy', $imovel['id'])}}" method="post">
-                            @csrf
-                            <input name="_method" type="hidden" value="DELETE">
-                            <button class="btn btn-danger" type="submit">Excluir</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-        <div class="col-md-12">
+                    <tr>
+                        <td>{{$imovel['id']}} </td>
+                        <td>{{$imovel['titulo']}}</td>
+                        <td>{{$imovel['areatt']}} m²</td>
+                        <td>{{$imovel['endereco']}}</td>
+                        <td id="valor">{{$imovel['valor']}}</td>
+                        <td>{{$imovel['cidade']}}</td>
+                        <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Ver Mais</a></td>
+                        <td><a href="{{url($imovel['discriminator'].'/alterar', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-warning">Alterar</a></td>
+                        <td>
+                            <form action="{{action('ImovelController@destroy', $imovel['id'])}}" method="post">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-danger" type="submit">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
+        <div class="tabela-listagem"></div>
     </div>
+</div>
 
-    @include('layouts.footer')
-    @include('layouts.admin.scripts')
+@include('layouts.footer')
+@include('layouts.admin.scripts')
+<script>
+    $(document).ready( function () {
+        $('#imovel').DataTable();
+    } );
+</script>
 </body>
 </html>

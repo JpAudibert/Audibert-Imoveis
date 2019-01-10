@@ -99,3 +99,4 @@ Route::get('/comercial/vendas', 'ImovelController@vendasComercial')->name('venda
 Route::get('/rural/vendas', 'ImovelController@vendasRural')->name('vendasRural');
 
 Route::get('/terreno/vendas', 'ImovelController@vendasTerreno')->name('vendasTerreno');
+
