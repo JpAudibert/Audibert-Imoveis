@@ -102,9 +102,9 @@ class ImovelController extends Controller
         $imovel->discriminator= $request->get('discriminator');
         $imovel->areatt = $request->get('areatt');
         $imovel->endereco = $request->get('endereco');
-        if(!is_numeric($request->get('valor'))){
+        if($request->get('valor')==null){
             $imovel->valor = "Sob consulta";
-        }elseif(is_numeric($request->get('valor'))){
+        }elseif($request->get('valor')!==null){
             $imovel->valor = 'R$ '.$request->get('valor');
         }
         // dd($imovel->valor);
@@ -114,6 +114,11 @@ class ImovelController extends Controller
         $imovel->cep = $request->get('cep');
         $imovel->obs = $request->get('obs');
         $imovel->notas = $request->get('notas');
+        $imovel->nome_prop = $request->get('nome_prop');
+        $imovel->matricula = $request->get('matricula');
+        $imovel->telefone_prop = $request->get('telefone_prop');
+        $imovel->celular_prop = $request->get('celular_prop');
+        $imovel->valor_real = $request->get('valor_real');
 
         switch ($request->get('discriminator')) {
             case 'casa':
@@ -308,10 +313,10 @@ class ImovelController extends Controller
             $imovel->titulo = $request->get('titulo');
             $imovel->areatt = $request->get('areatt');
             $imovel->endereco = $request->get('endereco');
-            if(!is_numeric($request->get('valor'))){
+            if($request->get('valor')==null){
                 $imovel->valor = "Sob consulta";
-            }elseif(is_numeric($request->get('valor'))){
-                $imovel->valor = 'R$ '.$request->get('valor');
+            }else{
+                $imovel->valor = $request->get("valor");
             }
             $imovel->bairro = $request->get('bairro');
             $imovel->cidade = $request->get('cidade');
@@ -319,6 +324,11 @@ class ImovelController extends Controller
             $imovel->cep = $request->get('cep');
             $imovel->obs = $request->get('obs');
             $imovel->notas = $request->get('notas');
+            $imovel->nome_prop = $request->get('nome_prop');
+            $imovel->matricula = $request->get('matricula');
+            $imovel->telefone_prop = $request->get('telefone_prop');
+            $imovel->celular_prop = $request->get('celular_prop');
+            $imovel->valor_real = $request->get('valor_real');
             $imovel->areapv = $request->get('areapv');
             $imovel->garagem = $request->get('garagem');
             $imovel->jardim = $request->get('jardim');

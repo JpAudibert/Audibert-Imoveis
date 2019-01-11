@@ -19,26 +19,6 @@
             <li class="breadcrumb-item active">Casas</li>
         </ol>
         <div class="row">
-            <div class="col-md-4 filtros">
-                <select class="custom-select" id="quarto">
-                    <option hidden>Selecione Número de Quartos</option>
-                    <option value="1">1 Quarto</option>
-                    <option value="2">2 Quartos</option>
-                    <option value="3">3 Quartos</option>
-                    <option value="4">4 Quartos ou mais</option>
-                </select>
-            </div>
-            <div class="col-md-4 filtros">
-                <select class="custom-select" id="banheiro">
-                    <option hidden>Selecione Número de Banheiros</option>
-                    <option value="1">1 Banheiro</option>
-                    <option value="2">2 Banheiros</option>
-                    <option value="3">3 Banheiros</option>
-                    <option value="4">4 Banheiros ou mais</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
             @foreach ($casas as $casa)
             <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                 <div class="card h-100">

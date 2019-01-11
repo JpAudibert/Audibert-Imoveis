@@ -14,7 +14,7 @@
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
                     <label for="valor" class="form-label">Valor: <span style="color:gray">(deixe em branco se sob consulta)</span></label><br>
-                    <input type="number" class="form-control" id="valor" name="valor" placeholder="Valor do Imóvel">
+                    <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor do Imóvel">
                   </div>
                   <div class="controls col-md-6">
                     <label for="endereco" class="form-label">Endereço:</label><br>

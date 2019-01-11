@@ -27,6 +27,11 @@ class CreateImovelsTable extends Migration
             $table->string('img',2000)->nullable();
             $table->string('obs',2000);
             $table->string('notas',2000)->nullable();
+            $table->string('nome_prop')->nullable();
+            $table->string('matricula')->nullable();
+            $table->string('telefone_prop')->nullable();
+            $table->string('celular_prop')->nullable();
+            $table->string('valor_real')->nullable();
             $table->string('areapv')->nullable();
             $table->string('garagem')->nullable();
             $table->string('jardim')->nullable();

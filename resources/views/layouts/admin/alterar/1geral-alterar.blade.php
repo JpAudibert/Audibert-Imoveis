@@ -17,7 +17,7 @@
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
                     <label for="valor" class="form-label">Valor:</label><br>
-                    <input type="text" class="form-control" id="valor" name="valor" value="{{$imovel->valor}}"  data-validation-required-message="Insira o Valor" placeholder="Valor do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
+                    <input type="text" class="form-control" id="valor" name="valor" value=" @if($imovel->valor!=="Sob consulta"){{$imovel->valor}} @endif"  data-validation-required-message="Insira o Valor" placeholder="Valor do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
                   </div>
                   <div class="controls col-md-6">
                     <label for="endereco" class="form-label">Endereço:</label><br>
