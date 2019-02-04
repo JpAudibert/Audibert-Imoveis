@@ -7,7 +7,7 @@
                   </div>
                   <div class="controls col-md-6">
                     <label for="areatt" class="form-label">Área Total / Área do Terreno:</label><br>
-                    <input type="text" class="form-control" id="areatt" name="areatt" required=""  placeholder="Área do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
+                    <input type="text" class="form-control" id="areatt" name="areatt" required=""  placeholder="Área do Imóvel">
                   </div>
                 </div>
 
@@ -35,7 +35,7 @@
 
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
-                    <label for="cep" class="form-label">CEP:</label><br>
+                    <label for="cep" class="form-label">CEP: (00000-000)</label><br>
                     <input type="text" class="form-control" id="cep" name="cep" required="" placeholder="CEP do local - (00000-000)" pattern="\d{5}-\d{3}">
                   </div>
                   <div class="controls col-md-6">

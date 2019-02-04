@@ -10,14 +10,14 @@
                   </div>
                   <div class="controls col-md-6">
                     <label for="areatt" class="form-label">Área Total:</label><br>
-                    <input type="text" class="form-control" id="areatt" name="areatt" value="{{$imovel->areatt}}" required data-validation-required-message="Insira a Área Total" placeholder="Área Total do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
+                    <input type="text" class="form-control" id="areatt" name="areatt" value="{{$imovel->areatt}}" required data-validation-required-message="Insira a Área Total" placeholder="Área Total do Imóvel">
                   </div>
                 </div>
 
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
                     <label for="valor" class="form-label">Valor:</label><br>
-                    <input type="text" class="form-control" id="valor" name="valor" value=" @if($imovel->valor!=="Sob consulta"){{$imovel->valor}} @endif"  data-validation-required-message="Insira o Valor" placeholder="Valor do Imóvel" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
+                    <input type="text" class="form-control" id="valor" name="valor" value=" @if($imovel->valor!=="Sob consulta"){{$imovel->valor}} @endif"  data-validation-required-message="Insira o Valor" placeholder="Valor do Imóvel">
                   </div>
                   <div class="controls col-md-6">
                     <label for="endereco" class="form-label">Endereço:</label><br>
@@ -38,7 +38,7 @@
 
                 <div class="control-group form-group row">
                   <div class="controls col-md-6">
-                    <label for="cep" class="form-label">CEP:</label><br>
+                    <label for="cep" class="form-label">CEP: (00000-000)</label><br>
                     <input type="text" class="form-control" id="cep" name="cep" value="{{$imovel->cep}}"  >
                   </div>
                   <div class="controls col-md-6">

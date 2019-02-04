@@ -1,8 +1,8 @@
 
 <div class="control-group form-group row">
     <div class="controls col-md-6">
-        <label for="obs" class="form-label">Observações:</label><br>
-        <textarea class="form-control" id="obs" name="obs" rows="4" placeholder="Observações do Imóvel" required>{{$imovel->obs}}</textarea>
+        <label for="obs" class="form-label">Descrição:</label><br>
+        <textarea class="form-control" id="obs" name="obs" rows="4" placeholder="Descrição do Imóvel" required>{{$imovel->obs}}</textarea>
     </div>
     <div class="controls col-md-6">
         <label for="img" class="form-label">Imagens: <span style="color:gray;">(a primeira imagem será o destaque)<span></label><br>
@@ -35,8 +35,8 @@
     </div>
     <div class="control-group form-group row">
         <div class="controls col-md-6">
-            <label for="obs" class="form-label">Notas:</label><br>
-            <textarea class="form-control" id="obs" name="notas" rows="4" placeholder="Notas da Venda">{{$imovel->notas}}</textarea>
+            <label for="obs" class="form-label">Observações:</label><br>
+            <textarea class="form-control" id="obs" name="notas" rows="4" placeholder="Observações da Venda">{{$imovel->notas}}</textarea>
         </div>
         <div class="controls col-md-6">
             <label for="valor_real" class="form-label">Valor do Imóvel (Se sob consulta):</label><br>

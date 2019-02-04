@@ -2,12 +2,12 @@
 <html lang="en">
 
   <head>
-    @include('\layouts.admin.head')
+    @include('layouts.admin.head')
     <title>Inserir Imóvel</title>
   </head>
   <body>
     <div class="container">
-@include('\layouts.admin.navbar')
+@include('layouts.admin.navbar')
 
 <!-- Page Heading/Breadcrumbs -->
 <h1 class="mt-4 mb-3">Inserir Área Rural</small>
@@ -41,7 +41,7 @@
 
             <div class="container">
                 <h3>Área Rural</h3>
-                @include('\layouts.admin.inserir.1geral-inserir')
+                @include('layouts.admin.inserir.1geral-inserir')
 
                 {{-- ÁREA RURAL --}}
 
@@ -63,14 +63,14 @@
 
                 {{-- ÁREA RURAL --}}
 
-                @include('\layouts.admin.inserir.2geral-inserir')
+                @include('layouts.admin.inserir.2geral-inserir')
 
               <!-- /.row -->
 
             </div>
             <!-- /.container -->
-                @include('\layouts.footer')
-                @include('\layouts.admin.scripts')
+                @include('layouts.footer')
+                @include('layouts.admin.scripts')
 
             <!-- Contact form JavaScript -->
             <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->

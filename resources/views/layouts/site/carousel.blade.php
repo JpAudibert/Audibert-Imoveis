@@ -7,24 +7,24 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+      <div class="carousel-item active" style="background-image: url('/images/imagesite/welcome1.jpg')">
         <div class="carousel-caption d-none d-md-block">
-          <h3>First Slide</h3>
-          <p>This is a description for the first slide.</p>
+          <h3 class="sombra">Prazer em Bem Servir</h3>
+          <p class="sombra">Teremos o prazer de receber-lhe em nosso escritório!</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+      <div class="carousel-item" style="background-image: url('/images/imagesite/welcome2.jpg')">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Second Slide</h3>
-          <p>This is a description for the second slide.</p>
+          <h3 class="sombra">Profissionalismo</h3>
+          <p class="sombra">Compra e venda são assuntos sérios, e sabemos disso!</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+      <div class="carousel-item" style="background-image: url('/images/imagesite/welcome3.jpg')">
         <div class="carousel-caption d-none d-md-block">
-          <h3>Third Slide</h3>
-          <p>This is a description for the third slide.</p>
+          <h3 class="sombra">Confiança em Bons Negócios</h3>
+          <p class="sombra">A confiança é parte fundamental em nossa empresa.</p>
         </div>
       </div>
     </div>

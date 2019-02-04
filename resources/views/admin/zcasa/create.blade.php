@@ -2,12 +2,12 @@
 <html lang="en">
 
   <head>
-    @include('\layouts.admin.head')
+    @include('layouts.admin.head')
     <title>Inserir Imóvel</title>
   </head>
   <body>
     <div class="container">
-@include('\layouts.admin.navbar')
+@include('layouts.admin.navbar')
 
 <!-- Page Heading/Breadcrumbs -->
 <h1 class="mt-4 mb-3">Inserir Casa</small>
@@ -41,7 +41,7 @@
 
             <div class="container">
                 <h3>Casa</h3>
-                @include('\layouts.admin.inserir.1geral-inserir')
+                @include('layouts.admin.inserir.1geral-inserir')
 
                 {{-- CASA --}}
 
@@ -49,7 +49,7 @@
                     <div class="control-group form-group row">
                       <div class="controls col-md-6 mb-1">
                         <label for="areapv" class="form-label">Área da Casa:</label><br>
-                        <input type="text" class="form-control" id="areapv" name="areapv" placeholder="Área da Casa" onkeypress="if (!isNaN(String.fromCharCode(window.event.keyCode))) return true; else return false;">
+                        <input type="text" class="form-control" id="areapv" name="areapv" placeholder="Área da Casa">
                       </div>
                       <div class="controls col-md-6">
                         <label for="garagem" class="form-label">Vagas de Garagem:</label><br>
@@ -144,14 +144,14 @@
 
                 {{-- CASA --}}
 
-                @include('\layouts.admin.inserir.2geral-inserir')
+                @include('layouts.admin.inserir.2geral-inserir')
 
               <!-- /.row -->
 
             </div>
             <!-- /.container -->
-                @include('\layouts.footer')
-                @include('\layouts.admin.scripts')
+                @include('layouts.footer')
+                @include('layouts.admin.scripts')
 
             <!-- Contact form JavaScript -->
             <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->

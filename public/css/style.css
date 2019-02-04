@@ -127,3 +127,6 @@ body{
 .centro{
     margin: 0 auto;
 }
+.sombra{
+    text-shadow: -1px 0 2px rgb(44, 44, 44), 0 1px 2px rgb(44, 44, 44);
+}

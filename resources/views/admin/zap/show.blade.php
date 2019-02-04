@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    @include('\layouts.admin.head')
+    @include('layouts.admin.head')
     <title>Mostrar Imóvel</title>
 </head>
 <body>
     <div class="container">
-        @include('\layouts.admin.navbar')
+        @include('layouts.admin.navbar')
 
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">{{$imovel->titulo}}
@@ -125,8 +125,8 @@
 
         </div>
     </div>
-    @include('\layouts.footer')
-    @include('\layouts.admin.scripts')
+    @include('layouts.footer')
+    @include('layouts.admin.scripts')
 
 </body>
 
