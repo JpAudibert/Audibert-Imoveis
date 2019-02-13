@@ -20,7 +20,7 @@
 
                 <!-- Intro Content -->
                 <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 puxa-cima">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">

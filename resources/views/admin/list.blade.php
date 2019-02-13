@@ -42,7 +42,7 @@
                         <td>{{$imovel['endereco']}}</td>
                         <td>{{$imovel['valor']}}</td>
                         <td>{{$imovel['cidade']}}</td>
-                        <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Ver Mais</a></td>
+                        <td><a href="{{url($imovel['discriminator'].'/ver', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-success">Mostrar</a></td>
                         <td><a href="{{url($imovel['discriminator'].'/alterar', Illuminate\Support\Facades\Crypt::encryptString($imovel['id']))}}" class="btn btn-warning">Alterar</a></td>
                         <td>
                             <form action="{{action('ImovelController@destroy', $imovel['id'])}}" method="post">

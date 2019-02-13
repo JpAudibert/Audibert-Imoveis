@@ -97,7 +97,7 @@
                     @if ($imovel->telefone_prop!==null && $imovel->celular_prop!==null) <p><strong> Telefones:</strong> {{$imovel->telefone_prop}} - {{$imovel->celular_prop}}</p>@endif
                     @if ($imovel->telefone_prop!==null && $imovel->celular_prop==null) <p><strong> Telefone:</strong> {{$imovel->telefone_prop}}</p>@endif
                     @if ($imovel->telefone_prop==null && $imovel->celular_prop!==null) <p><strong> Telefone:</strong> {{$imovel->celular_prop}}</p>@endif
-                    @if ($imovel->valor!==null) <p><strong> Valor do Imóvel:</strong> R$ {{$imovel->valor_real}}</p>@endif
+                    @if ($imovel->valor_real!==null) <p><strong> Valor do Imóvel:</strong> R$ {{$imovel->valor_real}}</p>@endif
                     @if ($imovel->notas==null)
                     Não há anotações.
                     @else

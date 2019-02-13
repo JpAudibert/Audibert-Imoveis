@@ -33,9 +33,9 @@
                 </div>
             </div>
             @endforeach
-            <div class="centro">
-                {{ $terrenos->links() }}
-            </div>
+        </div>
+        <div class="centro">
+            {{ $terrenos->links() }}
         </div>
     </div>
 </div>

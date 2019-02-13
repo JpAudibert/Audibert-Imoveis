@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Imovel;
-use App\Imagem;
 use Illuminate\Support\Facades\Crypt;
 
 class ImovelController extends Controller
@@ -316,7 +315,12 @@ class ImovelController extends Controller
             if($request->get('valor')==null){
                 $imovel->valor = "Sob consulta";
             }else{
-                $imovel->valor = $request->get("valor");
+                if(strpos($imovel->valor, '.') && strpos($imovel->valor, ',')){
+                    $imovel->valor = 'R$ '.$request->get("valor");
+                }
+                else{
+                    $imovel->valor = $request->get('valor');
+                }
             }
             $imovel->bairro = $request->get('bairro');
             $imovel->cidade = $request->get('cidade');
@@ -413,12 +417,12 @@ class ImovelController extends Controller
             }
             public function vendasRural()
             {
-                $rurals = Imovel::where('discriminator','=','rural')->paginate(12);
+                $rurals = Imovel::where('discriminator','=','rural')->orderBy('created_at', 'desc')->paginate(12);
                 return view('site.zrural.list', compact('rurals'));
             }
             public function vendasTerreno()
             {
-                $terrenos = Imovel::where('discriminator','=','terreno')->paginate(12);
+                $terrenos = Imovel::where('discriminator','=','terreno')->orderBy('created_at', 'desc')->paginate(12);
                 return view('site.zterreno.list', compact('terrenos'));
             }
         }
