@@ -2,7 +2,6 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     @include('layouts.site.head')
-
     <title>Audibert Imóveis</title>
 </head>
 <body>
@@ -10,6 +9,7 @@
     @include('layouts.site.carousel')
     <div class="container">
         <h2 class="abaixa abaixa-muito">Destaques:</h2>
+        <h3 id="prot"></h3>
         <div class="row">
             @php ($i=0)
             @foreach ($vendas as $venda)
@@ -44,8 +44,8 @@
                             @case("rural")
                             <p class="card-text"><i class="fas fa-horse"></i>&nbsp;&nbsp; Área Rural</p>
                             <p class="card-text"><i class="fas fa-ruler-combined"></i>&nbsp;&nbsp; {{$venda->areatt}} m²</p>
-                            <p class="card-text"><i class="fas fa-vector-square"></i>&nbsp;&nbsp; @if ($venda->cerca=="t") Cercado @endif</p>
-                            <p class="card-text"><i class="fas fa-bolt"></i>&nbsp;&nbsp; @if ($venda->energia=="t") Com Acesso a Energia Elétrica @endif</p>
+                            @if ($venda->cerca=="t")<p class="card-text"><i class="fas fa-vector-square"></i>&nbsp;&nbsp; Cercado @endif</p>
+                            @if ($venda->energia=="t")<p class="card-text"><i class="fas fa-bolt"></i>&nbsp;&nbsp; Com Acesso a Energia Elétrica @endif</p>
                             @break
                             @case("terreno")
                             <p class="card-text"><i class="fas fa-object-group"></i>&nbsp;&nbsp; Terreno</p>
@@ -66,6 +66,5 @@
     </div>
     @include('layouts.footer')
     @include('layouts.site.scripts')
-    <link rel="stylesheet" href="/js/bootstrap.bundle.min.js">
 </body>
 </html>

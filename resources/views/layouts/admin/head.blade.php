@@ -1,8 +1,10 @@
 
 <meta charset="utf-8">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Há mais de duas décadas de experiência no ramo imobiliário, sempre com comprador e vendedor instruídos a fazer o melhor negócio">
+<meta name="author" content="Audibert Corretora de Imóveis">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css">

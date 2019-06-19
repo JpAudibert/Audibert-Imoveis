@@ -1,3 +1,8 @@
+body{
+    min-height: 100vh;
+    display:grid;
+}
+
 .mid-field{
     text-align: center;
 }
@@ -176,6 +181,12 @@ body{
         text-align: justify;
         font-size: 17px;
     }
+    .texto-ip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.9vw;
+    }
 }
 @media (orientation:landscape){
     .puxa-cima{
@@ -208,4 +219,9 @@ body{
         font-size: 17px;
         float: left;
     }
+}
+
+.map{
+    width: 100% !important;
+    height: 350px;
 }

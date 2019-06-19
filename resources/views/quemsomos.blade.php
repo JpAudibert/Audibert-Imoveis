@@ -45,11 +45,14 @@
                         <li>Creci: 34.941</li>
                         <li>Rua Salgado Filho, 29, Centro, Carlos Barbosa</li>
                     </ul>
-                  </div>
                 </div>
+            </div>
+                            <div class="map col-lg-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.4480468746656!2d-51.50482988522398!3d-29.298530203942637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c19ee2ec54b85%3A0x7debd74e0cd6aa48!2sAudibert+Corretor+de+Im%C3%B3veis!5e0!3m2!1spt-BR!2sbr!4v1557102203690!5m2!1spt-BR!2sbr" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
                 <!-- /.row -->
 
-              </div>
+            </div>
               <!-- /.container -->
     @include('layouts.site.scripts')
     @include('layouts.footer')

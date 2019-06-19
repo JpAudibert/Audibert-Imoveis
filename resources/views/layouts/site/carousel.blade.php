@@ -8,23 +8,23 @@
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div class="carousel-item active" style="background-image: url('/images/imagesite/welcome1.jpg')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="sombra">Prazer em Bem Servir</h3>
-          <p class="sombra">Teremos o prazer de receber-lhe em nosso escritório!</p>
+        <div class="carousel-caption d-none d-md-block texto-paginas">
+          <h3 class="sombra texto-ip">Prazer em Bem Servir</h3>
+          <p class="sombra texto-ip">Teremos o prazer de receber-lhe em nosso escritório!</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
       <div class="carousel-item" style="background-image: url('/images/imagesite/welcome2.jpg')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="sombra">Profissionalismo</h3>
-          <p class="sombra">Compra e venda são assuntos sérios, e sabemos disso!</p>
+        <div class="carousel-caption d-none d-md-block texto-paginas">
+          <h3 class="sombra texto-ip">Profissionalismo</h3>
+          <p class="sombra texto-ip">Compra e venda são assuntos sérios, e sabemos disso!</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item" style="background-image: url('/images/imagesite/welcome3.jpg')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="sombra">Confiança em Bons Negócios</h3>
-          <p class="sombra">A confiança é parte fundamental em nossa empresa.</p>
+        <div class="carousel-caption d-none d-md-block texto-paginas">
+          <h3 class="sombra texto-ip">Confiança em Bons Negócios</h3>
+          <p class="sombra texto-ip">A confiança é parte fundamental em nossa empresa.</p>
         </div>
       </div>
     </div>

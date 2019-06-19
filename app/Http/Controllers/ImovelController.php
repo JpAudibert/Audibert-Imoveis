@@ -315,7 +315,7 @@ class ImovelController extends Controller
             if($request->get('valor')==null){
                 $imovel->valor = "Sob consulta";
             }else{
-                if(strpos($imovel->valor, '.') && strpos($imovel->valor, ',')){
+                if(strpos($imovel->valor, '.') && strpos($imovel->valor, ',') && strpos($imovel->valor,'R$')==0){
                     $imovel->valor = 'R$ '.$request->get("valor");
                 }
                 else{

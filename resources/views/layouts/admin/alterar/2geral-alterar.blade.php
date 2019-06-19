@@ -7,7 +7,7 @@
     <div class="controls col-md-6">
         <label for="img" class="form-label">Imagens: <span style="color:gray;">(a primeira imagem será o destaque)<span></label><br>
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="img" name="img[]" multiple required value="{{$imovel->img[0]}}">
+                <input type="file" class="custom-file-input" id="img" name="img[]" multiple required value=" @for ($i = 0; $i< count($imovel->img); $i++){{($imovel->img[$i])}}@endfor">
                 <label for="img" class="custom-file-label">Selecione</label>
             </div>
         </div>
@@ -49,4 +49,4 @@
 </div>
 </div>
 </div>
-
+{{dd($imovel->img)}}
